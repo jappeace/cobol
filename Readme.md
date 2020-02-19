@@ -5,8 +5,7 @@
 This is a small exploration of cobol.
 
 # GUI
-I found a thread that says they use it, their spells don't work though.
-We can' find AG_InitGraphics.
-The goal right now is to fix that reproducibly.
+I found a thread that uses a GUI framework, trough a bit of tinkering we modified their spells to work on nixos.
+Now we have reproducible cobol (cobol forever!!!).
 
 https://sourceforge.net/p/open-cobol/discussion/cobol/thread/c2ac66c1/
