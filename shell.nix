@@ -2,6 +2,7 @@
 pkgs.mkShell{
     buildInputs = [
         pkgs.gnu-cobol
+        pkgs.libagar
     ];
 }
 
