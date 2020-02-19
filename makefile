@@ -1,6 +1,6 @@
 build:
 	nix-shell --run "make build_"
 build_:
-	cobc -L $(AGAR)/lib -x hello.cob
+	cobc -x $(shell agar-config --libs | sed "s/-Wl,-rpath,/-L/" | sed "s/-ljpeg//") hello.cob 
 run:	
 	./hello
