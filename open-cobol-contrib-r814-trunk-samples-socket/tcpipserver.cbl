@@ -195,10 +195,10 @@ start-tcpipserver.
         or quit-received = 'Y'
             display NL 'received from peer ' buffer(1:buffer-length) end-display
             evaluate true
-            when buffer(1:4) = 'quit' or 'QUIT'
+            when buffer(1:3) = 'quit' or 'QUIT'
 *>              peer commands the server to shut down
                 move 'Y' to quit-received
-            when buffer(1:2) = 'ls' or 'LS'
+            when buffer(1:1) = 'ls' or 'LS'
 *>              send a directory listing to the peer
 *>              the server will close the connection
                 move spaces to system-command system-file-status
@@ -209,12 +209,12 @@ start-tcpipserver.
                     perform send-file
                 end-if
                 move 0 to buffer-length
-            when buffer(1:3) = 'get' or 'GET'
+            when buffer(1:2) = 'get' or 'GET'
 *>              send a file to the peer
                 move 'tcpipserver.cbl' to system-file-name
                 perform send-file
                 move 0 to buffer-length
-            when buffer(1:3) = 'put' or 'PUT'
+            when buffer(1:2) = 'put' or 'PUT'
 *>              get a file from the peer
 *>              the peer will close the connection
                 perform until buffer-length = 0
@@ -229,8 +229,9 @@ start-tcpipserver.
             when other
 *>              echo the command to the peer
 *>              the server will close the connection
+                move '200 OK' to buffer
+                move 6 to buffer-length
                 perform send-to-peer
-                perform read-from-peer
                 move 0 to buffer-length
             end-evaluate
         end-perform
