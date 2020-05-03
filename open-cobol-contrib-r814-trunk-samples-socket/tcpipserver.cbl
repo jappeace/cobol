@@ -229,8 +229,20 @@ start-tcpipserver.
             when other
 *>              echo the command to the peer
 *>              the server will close the connection
-                move '200 OK' to buffer
-                move 6 to buffer-length
+                move 'HTTP/1.1 200 OK 
+Date: Mon, 27 Jul 2009 12:28:53 GMT
+Server: Jappie-server
+Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
+Content-Length: 88
+Content-Type: text/html
+Connection: Closed
+
+<html>
+<body>
+<h1>Hello, World!</h1>
+</body>
+</html>' to buffer
+                move 225 to buffer-length
                 perform send-to-peer
                 move 0 to buffer-length
             end-evaluate
