@@ -1,7 +1,5 @@
 [![Jappiejappie](https://img.shields.io/badge/twitch.tv-jappiejappie-purple?logo=twitch)](https://www.twitch.tv/jappiejappie)
 
-> Founder, 7-Month Subscriber and Gifter Leader 1132Skybro, said: "why are we doing cobol NotLikeThis"
-
 Simple cobol http server
 
 We modified an example socket implementation from [here](https://sourceforge.net/p/open-cobol/contrib/HEAD/tree/trunk/samples/socket/),
