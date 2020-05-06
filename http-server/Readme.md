@@ -1,5 +1,7 @@
 [![Jappiejappie](https://img.shields.io/badge/twitch.tv-jappiejappie-purple?logo=twitch)](https://www.twitch.tv/jappiejappie)
 
+> Beauty is in the eye of the user
+
 Simple cobol http server
 
 We modified an example socket implementation from [here](https://sourceforge.net/p/open-cobol/contrib/HEAD/tree/trunk/samples/socket/),
